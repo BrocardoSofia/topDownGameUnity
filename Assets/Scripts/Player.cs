@@ -30,4 +30,6 @@ public class Player : MonoBehaviour
         //make the player move
         transform.Translate(moveDelta * Time.deltaTime);
     }
+
+    
 }
