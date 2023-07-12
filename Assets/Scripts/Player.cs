@@ -5,8 +5,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private BoxCollider2D boxCollider;
-
     private Vector3 moveDelta;
+    private RaycastHit2D hit;
 
     private void Start()
     {
@@ -27,8 +27,31 @@ public class Player : MonoBehaviour
         else if (moveDelta.x < 0)
             transform.localScale = new Vector3(-1, 1, 1);
 
-        //make the player move
-        transform.Translate(moveDelta * Time.deltaTime);
+
+        //Make sure we can move in this direction()y, by casting a box there first
+        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(0, moveDelta.y),
+                                Mathf.Abs(moveDelta.y * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
+
+        if(hit.collider == null)
+        {
+            //the box return null, so player can move
+
+            //make the player move in the axes y
+            transform.Translate(0,moveDelta.y * Time.deltaTime,0);
+        }
+
+        //Make sure we can move in this direction(x), by casting a box there first
+        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0),
+                                Mathf.Abs(moveDelta.x * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
+
+        if (hit.collider == null)
+        {
+            //the box return null, so player can move
+
+            //make the player move in the axes y
+            transform.Translate(moveDelta.x * Time.deltaTime, 0, 0);
+        }
+
     }
 
     
