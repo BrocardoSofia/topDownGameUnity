@@ -171,7 +171,7 @@ Transform:
   - {fileID: 2135362508}
   - {fileID: 1235679864}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &620506179
 GameObject:
@@ -28854,6 +28854,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7831825612778832321, guid: bb9bff5a13cf23e41be928ccb947d5c1, type: 3}
   m_PrefabInstance: {fileID: 944502709}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &924641874
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 541196586623686696, guid: c742ba7205bcd2349aec68a86228556c, type: 3}
+      propertyPath: m_Name
+      value: TEST_NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 541196586623686699, guid: c742ba7205bcd2349aec68a86228556c, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 541196586623686699, guid: c742ba7205bcd2349aec68a86228556c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.338359
+      objectReference: {fileID: 0}
+    - target: {fileID: 541196586623686699, guid: c742ba7205bcd2349aec68a86228556c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.138
+      objectReference: {fileID: 0}
+    - target: {fileID: 541196586623686699, guid: c742ba7205bcd2349aec68a86228556c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 541196586623686699, guid: c742ba7205bcd2349aec68a86228556c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 541196586623686699, guid: c742ba7205bcd2349aec68a86228556c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 541196586623686699, guid: c742ba7205bcd2349aec68a86228556c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 541196586623686699, guid: c742ba7205bcd2349aec68a86228556c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 541196586623686699, guid: c742ba7205bcd2349aec68a86228556c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 541196586623686699, guid: c742ba7205bcd2349aec68a86228556c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 541196586623686699, guid: c742ba7205bcd2349aec68a86228556c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c742ba7205bcd2349aec68a86228556c, type: 3}
 --- !u!1001 &944502709
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28863,7 +28920,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7831825612778832321, guid: bb9bff5a13cf23e41be928ccb947d5c1, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7831825612778832321, guid: bb9bff5a13cf23e41be928ccb947d5c1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -37788,6 +37845,37 @@ MonoBehaviour:
   lookAt: {fileID: 769485191}
   boundX: 0.15
   boundY: 0.05
+--- !u!1 &2124815737 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 541196586623686696, guid: c742ba7205bcd2349aec68a86228556c, type: 3}
+  m_PrefabInstance: {fileID: 924641874}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2124815738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124815737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb8fe663c3af62942ac0d1b9d9edcc56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
 --- !u!1 &2135362507
 GameObject:
   m_ObjectHideFlags: 0
