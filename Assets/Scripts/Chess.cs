@@ -2,10 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Chess : Collidable
+public class Chess : Collectable
 {
-    protected override void OnCollide(Collider2D coll)
+    public Sprite emptyChess;
+    public int pesosAmount = 5; 
+
+    protected override void OnCollect()
     {
-        Debug.Log("Grant pesos");
+        if(!collected)
+        {
+            base.OnCollect();
+            Debug.Log("Grant " + pesosAmount + " Pesos");
+            GetComponent<SpriteRenderer>().sprite = emptyChess;
+        }
     }
 }
