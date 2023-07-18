@@ -185,6 +185,7 @@ GameObject:
   - component: {fileID: 171018039}
   - component: {fileID: 171018038}
   - component: {fileID: 171018040}
+  - component: {fileID: 171018041}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Untagged
@@ -269,7 +270,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -318,16 +319,16 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   m_TileSpriteArray:
-  - m_RefCount: 1
-    m_Data: {fileID: 1175460440, guid: 4bb8d8a7f34e39f44ba27368a84df139, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -590662054, guid: 4bb8d8a7f34e39f44ba27368a84df139, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 1113706864, guid: 4bb8d8a7f34e39f44ba27368a84df139, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -1970975839, guid: 4bb8d8a7f34e39f44ba27368a84df139, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 1175460440, guid: 4bb8d8a7f34e39f44ba27368a84df139, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 4
     m_Data:
@@ -400,6 +401,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.31757325, y: 0.31135654}
   m_EdgeRadius: 0
+--- !u!114 &171018041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171018036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99b4fa73195b44340a08ef4571432cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  sceneName: Dungeon1
 --- !u!1 &277824211
 GameObject:
   m_ObjectHideFlags: 0
