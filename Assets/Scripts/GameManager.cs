@@ -8,7 +8,17 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        if(GameManager.instance != null)
+        {
+            //Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+            //SceneManager.sceneLoaded += LoadState;
+            //DontDestroyOnLoad(gameObject);
+        }
+        
     }
 
     //Ressources for the game
@@ -24,14 +34,20 @@ public class GameManager : MonoBehaviour
     public int pesos;
     public int experience;
 
-    //save state functions
+    //save state
+    /*
+     * int preferedSkin
+     * int pesos
+     * int experience
+     * int weaponLevel
+     */
     public void SaveState()
     {
-
+        string saving = "";
     }
 
     public void LoadState() 
     {
-
+        Debug.Log("Load State");
     }
 }
