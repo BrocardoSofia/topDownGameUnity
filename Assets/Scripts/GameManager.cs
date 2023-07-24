@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,13 +12,13 @@ public class GameManager : MonoBehaviour
     {
         if(GameManager.instance != null)
         {
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
         else
         {
             instance = this;
-            //SceneManager.sceneLoaded += LoadState;
-            //DontDestroyOnLoad(gameObject);
+            SceneManager.sceneLoaded += LoadState;
+            DontDestroyOnLoad(gameObject);
         }
         
     }
@@ -43,11 +45,35 @@ public class GameManager : MonoBehaviour
      */
     public void SaveState()
     {
-        string saving = "";
+        string saveValue = "";
+
+        saveValue += "0" + "|";
+        saveValue += pesos.ToString() + "|";
+        saveValue += experience.ToString() + "|";
+        saveValue += "0";
+
+        PlayerPrefs.SetString("SaveState", saveValue);
+        
     }
 
-    public void LoadState() 
+    private void LoadState(Scene s, LoadSceneMode mode) 
     {
-        Debug.Log("Load State");
+        if(PlayerPrefs.HasKey("SaveState"))
+        {
+            string[] data = PlayerPrefs.GetString("SaveState").Split('|');
+            //ej: "0|10|15|2"  ---  {0,10,15,2}
+
+            //Change player skin
+
+            //Load pesos
+            pesos = int.Parse(data[1]);
+
+            //Load experience
+            experience = int.Parse(data[2]);
+
+            //Load weapon level
+        }
+
+
     }
 }
