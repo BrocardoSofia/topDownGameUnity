@@ -12,8 +12,11 @@ public class Chess : Collectable
         if(!collected)
         {
             base.OnCollect();
-            Debug.Log("Grant " + pesosAmount + " Pesos");
             GetComponent<SpriteRenderer>().sprite = emptyChess;
+
+            // +5 pesos
+            GameManager.instance.ShowText("+" + pesosAmount + " pesos!", 14, Color.yellow, transform.position,
+                                           Vector3.up * 50, 1.0f);
         }
     }
 }

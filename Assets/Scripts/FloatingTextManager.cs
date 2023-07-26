@@ -8,8 +8,33 @@ public class FloatingTextManager : MonoBehaviour
     public GameObject textContainer;
     public GameObject textPrefab;
 
-    private List<FloatingText> floatingTexts = new List<FloatingText>();    
+    private List<FloatingText> floatingTexts = new List<FloatingText>();
 
+    private void Update()
+    {
+        foreach(FloatingText txt in floatingTexts)
+        {
+            txt.UpdateFloatingText();
+        }
+    }
+
+    public void Show(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
+    {
+        FloatingText floatingText = GetFloatingText();
+
+        floatingText.txt.text = msg;
+        floatingText.txt.fontSize = fontSize;   
+        floatingText.txt.color = color; 
+
+        //Transfer word space to screen space so we can use it in the UI
+        floatingText.go.transform.position = Camera.main.WorldToScreenPoint(position);
+
+        floatingText.motion = motion;
+        floatingText.duraion = duration;
+
+        floatingText.Show();
+    }
+   
     private FloatingText GetFloatingText()
     {
         FloatingText txt = floatingTexts.Find(t => !t.active);
