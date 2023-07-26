@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FloatingText : MonoBehaviour
+public class FloatingText
 {
     public bool active; 
     public GameObject go;
@@ -23,5 +21,18 @@ public class FloatingText : MonoBehaviour
     {
         active = false;
         go.SetActive(active);
+    }
+
+    public void UpdateFloatingText()
+    {
+        if(active)
+        {
+            if( Time.time - lastShown > duraion) 
+            {
+                Hide();
+            }
+
+            go.transform.position += motion * Time.deltaTime;
+        }
     }
 }
