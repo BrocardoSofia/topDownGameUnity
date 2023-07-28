@@ -46,7 +46,7 @@ public class Weapon : Collidable
         if (coll.tag == "Fighter")
         {
             if(coll.name != "Player")
-            {
+            {   
                 Debug.Log(coll.name);
             }
         }
