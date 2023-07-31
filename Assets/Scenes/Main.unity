@@ -13395,8 +13395,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1356393986}
   - {fileID: 2028002107}
+  - {fileID: 1356393986}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17734,6 +17734,7 @@ GameObject:
   - component: {fileID: 2028002107}
   - component: {fileID: 2028002108}
   - component: {fileID: 2028002109}
+  - component: {fileID: 2028002110}
   m_Layer: 7
   m_Name: enemy_0
   m_TagString: Fighter
@@ -17754,7 +17755,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1154671355}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2028002108
 SpriteRenderer:
@@ -17834,6 +17835,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.09063694, y: 0.101735055}
   m_EdgeRadius: 0
+--- !u!114 &2028002110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028002106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a89b5d704ae772458bbd6315ef7bdab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoint: 10
+  maxHitPoint: 10
+  pushRecoverySpeed: 0.2
 --- !u!1001 &541196587190707228
 PrefabInstance:
   m_ObjectHideFlags: 0
