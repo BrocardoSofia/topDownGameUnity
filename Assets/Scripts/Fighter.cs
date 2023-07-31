@@ -8,4 +8,6 @@ public class Fighter : MonoBehaviour
     public int hitPoint = 10;
     public int maxHitPoint = 10;
     public float pushRecoverySpeed = 0.2f;
+
+
 }
