@@ -9,7 +9,7 @@ public abstract class Mover : Fighter
     protected Vector3 moveDelta;
     protected RaycastHit2D hit;
     protected float ySpeed = 0.75f;
-    protected float zSpeed = 1.0f;
+    protected float xSpeed = 1.0f;
 
     protected virtual void Start()
     {
@@ -19,7 +19,7 @@ public abstract class Mover : Fighter
     protected virtual void UpdateMotor(Vector3 input)
     {
         //Reset moveDelta
-        moveDelta = input;
+        moveDelta = new Vector3(input.x * xSpeed, input.y * ySpeed, 0);
 
         //Swipe Sprite direction (right or left)
         if (moveDelta.x > 0)
