@@ -2447,6 +2447,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Skull
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44608099406e01e499cd7325e458c3b1
+      internalID: -1909958437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -2468,6 +2489,7 @@ TextureImporter:
       Portal_1: -590662054
       Portal_2: -1970975839
       Portal_3: 1113706864
+      Skull: -1909958437
       boss_1: -1440853276
       boss_2: -784230299
       boss_3: 210482737
